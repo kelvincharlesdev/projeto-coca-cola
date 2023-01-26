@@ -2,7 +2,6 @@
 
 html{
     font-size: 62.5%;
-    
 }
 
 body{
@@ -13,14 +12,18 @@ body{
     min-height: 100%;
 }
 
-.container{
-    max-width: 1440px;
-    margin: 0 auto;
-    width: 100%;
+.wrapper{
     position: relative;
+    height: 100vh;
 }
 
-.circle{
+.container{
+    margin: 0 auto;
+    width: 100%;
+    padding: 3rem 10rem;
+}
+
+.wrapper .circle{
     background-color: var(--background-red);
     height: 100%;
     width: 100%;
@@ -34,7 +37,11 @@ body{
 header .container{
     display: flex;
     justify-content: space-between;
-    padding: 3rem;
+    
+}
+
+header .container .logo{
+    max-width: 150px;
 }
 
 header .container nav .navegacao{
@@ -43,13 +50,12 @@ header .container nav .navegacao{
     height: 100%;
     gap: 5rem;
     
+    
 }
 
 
-
-
 header .container nav .navegacao li a{
-    color: #fff;
+    color: var(--color-text);
     font-size: 2rem;
     font-weight: 500;
     border-radius: 50px;
@@ -57,101 +63,115 @@ header .container nav .navegacao li a{
     justify-content: center;
     height: 3rem;
     width: 13rem;
+    transition: 0.3s ease-in-out;
+   
 
 }
 
 header .container nav .navegacao li a:hover{
     background-color: var(--background-red);
-  
 }
 
-.main{
-    position: relative;
-    width: 100%;
+main{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    height: calc(100vh - 218.75px);
 }
 
-.main .text{
-    position: relative;
-    max-width: 600px;
-    margin-right: 20px;
+
+
+main .container .text{
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+    
 }
 
-.main .text h2{
-    color: #fff;
-    font-size: 3em;
-    margin-bottom: 10px;
-    line-height: 2.5em;
+main .container .text h2{
+    color: var(--color-text);
+    font-size: 4rem;
+    line-height: 10rem;
     font-weight: 700;
 }
 
-.main .text h2 spam{
-    font-size: 3.5em;
-    color: #e51e2a;
+main .container .text h2 span{
+    font-size: 14rem;
+    color: var(--background-red);
 }
 
-.main .text p{
-    color: #fff;
+main .container .text p{
+    color: var(--color-text);
+    
 }
 
-.main .text a{
-    display: inline-block;
-    margin-top: 50px;
-    padding: 10px 25px;
-    background: #e51e2a;
-    color:#fff;
+main .container .text a{
+    margin-top: 5rem;
+    background-color: var(--background-red);
+    color: var(--color-text);
+    letter-spacing: 0.1rem;
     font-weight: 500;
-    letter-spacing: 1px;
-    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2.5rem;
+    width: 25rem;
     border-radius: 40px;
     transition: 0.3s ease-in-out;
 }
 
-.main .text a:hover{
+main .container .text a:hover{
     transform: translateY(-10px);
 }
 
-.icons{
+main .container .box-img{
     position: absolute;
-    bottom: 40px;
-    left: 100px;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+main .container .box-img img{
+    width: 150px;
+  
+}
+main .container .box-img .img1{
+    transform: rotate(-10deg);
+}
+main .container .box-img .img2{
+    transform: rotate(5deg);
+}
+main .container .box-img .img3{
+    transform: rotate(15deg);
+}
+main .container .box-img .img4{
+    transform: rotate(-15deg);
+}
+
+
+
+footer .container .icon{
     display: flex;
-    justify-content: center;
+    gap: 5rem;
+
+}
+
+footer .container .icon a{
+    color: var(--color-text);
+    border-radius: 5rem;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background-color: var(--background-icons);
+    transition: 0.3s ease-in-out;
 }
 
-.icons li{
-list-style: none;
-}
-
-.icons li a{
-display: inline-block;
-margin-left: 45px;
-background: #222;
-width: 50px;
-height: 50px;
-display: flex;
-justify-content: center;
-align-items: center;
-border-radius: 50%;
-transition: 0.3s ease-in-out;
-}
-
-.icons li a:hover{
-    background: #e51e2a;
+footer .container .icon a:hover{
+    background-color: var(--background-red);
     transform: translateY(-10px);
+    
 }
-
-.icons li a img{
-    filter: invert(1);
-    transform: scale(0.5);
-}
-
-
-
-
-
-
 
